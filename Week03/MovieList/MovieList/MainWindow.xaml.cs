@@ -31,12 +31,26 @@ namespace MovieList
 
         private void buttonAddMovie_Click(object sender, RoutedEventArgs e)
         {
-
+            string title = textBoxTitle.Text;
+            string releaseYear = textBoxReleaseYear.Text;
+            string director = textBoxDirector.Text;
+            string length = textBoxLength.Text;
+            string genre = textBoxGenre.Text;
+            Movie newMovie = new Movie(title, releaseYear, director, length, genre);
+            MovieList.Add(newMovie);
+            textBoxTitle.Clear();
+            textBoxReleaseYear.Clear();
+            textBoxDirector.Clear();
+            textBoxLength.Clear();
+            textBoxGenre.Clear();
         }
 
         private void buttonShowAllMovies_Click(object sender, RoutedEventArgs e)
         {
-
+            foreach(Movie m in MovieList)
+            {
+                m.ShowMovie();
+            }
         }
     }
 }
