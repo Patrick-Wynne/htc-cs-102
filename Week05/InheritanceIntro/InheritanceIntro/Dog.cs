@@ -7,20 +7,14 @@ using System.Windows;
 
 namespace InheritanceIntro
 {
-    public class Dog
+    public class Dog : Animal
     {
-        public string Name;
-        public int Height;
+
         public string Breed;
 
         public void Bark()
         {
             MessageBox.Show("Bark");
-        }
-
-        public void SayName()
-        {
-            MessageBox.Show("My name is " + this.Name);
         }
 
         public Dog() { }
@@ -31,5 +25,6 @@ namespace InheritanceIntro
             this.Height = height;
             this.Name = name;
         }
+        
     }
 }

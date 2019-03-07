@@ -49,6 +49,70 @@ namespace InheritanceIntro
             {
                 d.SayName();
             }
+
+            List<Duck> ducks = new List<Duck> ();
+
+            Duck duck1 = new Duck(25, "Harry");
+            Duck duck2 = new Duck(45, "Henrietta");
+
+            ducks.Add(duck1);
+            ducks.Add(duck2);
+
+            foreach (Duck d in ducks)
+            {
+                d.SayName();
+            }
+
+            List<Frog> frogs = new List<Frog>();
+
+            Frog frog1 = new Frog(25, "Croak", true);
+            Frog frog2 = new Frog(45, "Pepe", false);
+
+            frogs.Add(frog1);
+            frogs.Add(frog2);
+
+            foreach (Frog f in frogs)
+            {
+                f.SayName();
+            }
+
+            List<Cow> cows = new List<Cow>();
+
+            Cow cow1 = new Cow(25, "Lennard", "brown");
+            Cow cow2 = new Cow(45, "Harold", "white");
+
+            cows.Add(cow1);
+            cows.Add(cow2);
+
+            foreach (Cow c in cows)
+            {
+                c.SayName();
+            }
+
+        }
+
+        private void Quack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Duck duck = new Duck();
+            duck.Quack();
+        }
+
+        private void Ribbit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frog frog = new Frog();
+            frog.Ribbit();
+        }
+
+        private void Moo_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Cow cow = new Cow();
+            cow.Moo();
+        }
+
+        private void Show_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Organism org = new Organism();
+            MessageBox.Show(org.ToString());
         }
     }
 }
