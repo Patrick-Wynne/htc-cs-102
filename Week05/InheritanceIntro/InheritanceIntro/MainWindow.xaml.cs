@@ -33,62 +33,66 @@ namespace InheritanceIntro
 
         private void SayName_Button_Click(object sender, RoutedEventArgs e)
         {
+            List<Animal> animals = new List<Animal>();
             // Define a new List of dogs
-            List<Dog> dogs = new List<Dog>();
+            //List<Dog> dogs = new List<Dog>();
             
             // Instantiate some dog objects
             Dog dog1 = new Dog("Muppet", 20, "Rolf");
             Dog dog2 = new Dog("Golden Retriever", 30, "Air Bud");
 
             // Add the dogs to the list
-            dogs.Add(dog1);
-            dogs.Add(dog2);
+            animals.Add(dog1);
+            animals.Add(dog2);
 
             // Loop through the list and call a method on the objects
-            foreach (Dog d in dogs)
-            {
-                d.SayName();
-            }
+            //foreach (Dog d in animals)
+            //{
+            //    d.SayName();
+            //}
 
-            List<Duck> ducks = new List<Duck> ();
+            //List<Duck> ducks = new List<Duck> ();
 
             Duck duck1 = new Duck(25, "Harry");
             Duck duck2 = new Duck(45, "Henrietta");
 
-            ducks.Add(duck1);
-            ducks.Add(duck2);
+            animals.Add(duck1);
+            animals.Add(duck2);
 
-            foreach (Duck d in ducks)
-            {
-                d.SayName();
-            }
+            //foreach (Duck d in animals)
+            //{
+            //    d.SayName();
+            //}
 
-            List<Frog> frogs = new List<Frog>();
+            //List<Frog> frogs = new List<Frog>();
 
             Frog frog1 = new Frog(25, "Croak", true);
             Frog frog2 = new Frog(45, "Pepe", false);
 
-            frogs.Add(frog1);
-            frogs.Add(frog2);
+            animals.Add(frog1);
+            animals.Add(frog2);
 
-            foreach (Frog f in frogs)
-            {
-                f.SayName();
-            }
+            //foreach (Frog f in animals)
+            //{
+            //    f.SayName();
+            //}
 
-            List<Cow> cows = new List<Cow>();
 
             Cow cow1 = new Cow(25, "Lennard", "brown");
             Cow cow2 = new Cow(45, "Harold", "white");
 
-            cows.Add(cow1);
-            cows.Add(cow2);
+            animals.Add(cow1);
+            animals.Add(cow2);
 
-            foreach (Cow c in cows)
+            //foreach (Cow c in cows)
+            //{
+            //    c.SayName();
+            //}
+            foreach (Animal a in animals)
             {
-                c.SayName();
+                a.SayName();
+                MessageBox.Show("The height is "+a.Height);
             }
-
         }
 
         private void Quack_Button_Click(object sender, RoutedEventArgs e)

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="364">
     <StackPanel>
-        <TextBlock Name="title" FontSize="30">Doggo</TextBlock>
+        <Image Source="dog.jpg"></Image>
         <ListView Name="lvAnimals" Height="150px" Margin="0,0,0,10" SelectionChanged="lvAnimals_SelectionChanged">
             <ListView.View>
                 <GridView>
@@ -17,6 +17,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Click="SayName_Button_Click">Say Name</Button>
     </StackPanel>
 </Window>
