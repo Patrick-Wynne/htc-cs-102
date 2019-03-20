@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace MovieList
 {
@@ -18,9 +19,11 @@ namespace MovieList
 
         public void ShowDetails()
         {
-            string infoString = "Title: " + this.Title;
-            infoString += "\nRelease Year: " + this.ReleaseYear;
-            MessageBox.Show(infoString);
+            //string infoString = "Title: " + this.Title;
+            //infoString += "\nRelease Year: " + this.ReleaseYear;
+            //MessageBox.Show(infoString);
+            string path = Regex.Replace(Title, " ", "_");
+            System.Diagnostics.Process.Start("https://www.wikipedia.org/wiki/" + path);
         }
 
         public Movie() { }

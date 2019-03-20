@@ -33,12 +33,7 @@ namespace MovieList
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text));
-
-            MovieList.Add(movieToAdd);
-
-            titleInput.Clear();
-            releaseYearInput.Clear();
+            
         }
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)

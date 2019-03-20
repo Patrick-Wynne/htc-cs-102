@@ -1,0 +1,22 @@
+﻿<Window x:Class="MovieListInheritance.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieList"
+        mc:Ignorable="d"
+        Title="Add" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <TextBlock>Title</TextBlock>
+            <TextBox Name="titleInput" Margin="0,0,0,15"></TextBox>
+            <TextBlock>Release Year</TextBlock>
+            <TextBox Name="releaseYearInput" Margin="0,0,0,15"></TextBox>
+            <TextBlock>Animation Studio</TextBlock>
+            <TextBox Name="animationStudioInput" Margin="0,0,0,15"></TextBox>
+            <TextBlock>Animation Type</TextBlock>
+            <TextBox Name="animationTypeInput" Margin="0,0,0,15"></TextBox>
+            <Button Click="AddMovieButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10">Add Movie</Button>
+        </StackPanel>
+    </Grid>
+</Window>
