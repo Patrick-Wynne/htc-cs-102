@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace AbstractClassesIntro
 {
-    public class Animal
+    public abstract class Animal
     {
         public int Height
         {
@@ -26,9 +26,7 @@ namespace AbstractClassesIntro
             MessageBox.Show("My name is " + Name);
         }
 
-        public virtual void Speak()
-        {
-
-        }
+        public abstract void Speak();
+        
     }
 }
