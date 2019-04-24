@@ -16,9 +16,9 @@ namespace Final
             get
             {
                 EllipseGeometry myEllipseGeometry = new EllipseGeometry();
-                myEllipseGeometry.Center = new Point(200, 200);
-                myEllipseGeometry.RadiusX = Width/2;
-                myEllipseGeometry.RadiusY = Height/2;
+                myEllipseGeometry.Center = new Point(25, 25);
+                myEllipseGeometry.RadiusX = Width/2.5;
+                myEllipseGeometry.RadiusY = Height/2.5;
 
                 Path myPath = new Path();
                 myPath.Fill = Fill;
