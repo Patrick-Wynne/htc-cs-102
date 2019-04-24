@@ -25,28 +25,29 @@ namespace Final
             InitializeComponent();
             Triangle myTri = new Triangle(Brushes.Black, Brushes.Red, 2, 100, 100);
             mainCanvas.Children.Add(myTri);
+            comboBoxShapeSelect.SelectedIndex = 1;
+            comboBoxTypeSelect.SelectedIndex = 0;
         }
 
         private void comboBoxTypeSelect_SelectionChanged(object sender, EventArgs e)
         {
-            var select = comboBoxTypeSelect.SelectedItem as ComboBoxItem;
+                var select = comboBoxTypeSelect.SelectedIndex.ToString();
 
-            if (select.Content.ToString() == "Red")
-            {
-                Brush shapeColor = Brushes.Red;
-                displayShape(shapeColor);
-            }
-            else if (select.Content.ToString() == "Blue")
-            {
-                Brush shapeColor = Brushes.Blue;
-                displayShape(shapeColor);
-            }
-            else if (select.Content.ToString() == "Yellow")
-            {
-                Brush shapeColor = Brushes.Yellow;
-                displayShape(shapeColor);
-            }
-            
+                if (select == "0")
+                {
+                    Brush shapeColor = Brushes.Red;
+                    displayShape(shapeColor);
+                }
+                else if (select == "1")
+                {
+                    Brush shapeColor = Brushes.Blue;
+                    displayShape(shapeColor);
+                }
+                else if (select == "2")
+                {
+                    Brush shapeColor = Brushes.Yellow;
+                    displayShape(shapeColor);
+                }
         }
 
         private void comboBoxShapeSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -55,9 +56,9 @@ namespace Final
         }
         private void displayShape(Brush color)
         {
-            var select = comboBoxShapeSelect.SelectedItem as ComboBoxItem;
+            var select = comboBoxShapeSelect.SelectedIndex.ToString();
 
-            if (select.Content.ToString() == "Square")
+            if (select == "0")
             {
                 mainCanvas.Children.Clear();
                 Rectangle myRect = new Rectangle();
@@ -68,13 +69,13 @@ namespace Final
                 myRect.StrokeThickness = 2;
                 mainCanvas.Children.Add(myRect);
             }
-            else if (select.Content.ToString() == "Triangle")
+            else if (select == "1")
             {
                 mainCanvas.Children.Clear();
                 Triangle myTri = new Triangle(Brushes.Black, color, 2, 50, 50);
                 mainCanvas.Children.Add(myTri);
             }
-            else if (select.Content.ToString() == "Circle")
+            else if (select == "2")
             {
                 mainCanvas.Children.Clear();
                 Circle myCir = new Circle(Brushes.Black, color, 2, 50, 50);
