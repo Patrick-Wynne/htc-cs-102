@@ -15,7 +15,7 @@
                 <ComboBoxItem>Triangle</ComboBoxItem>
                 <ComboBoxItem>Circle</ComboBoxItem>
             </ComboBox>
-            <Label x:Name="info" Canvas.Left="192" Canvas.Top="86" Height="106" Width="125"></Label>
+            
             <ComboBox SelectionChanged="comboBoxTypeSelect_SelectionChanged" x:Name="comboBoxTypeSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="336" Canvas.Top="86">
                 <ComboBoxItem>Red</ComboBoxItem>
                 <ComboBoxItem>Blue</ComboBoxItem>
